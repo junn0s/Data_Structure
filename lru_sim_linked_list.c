@@ -7,7 +7,7 @@ typedef struct ListNode {
     int item;
     struct ListNode* next;
 } ListNode;
-
+ 
 typedef struct LinkedListBasic {
     ListNode* head;
     ListNode* tail;
