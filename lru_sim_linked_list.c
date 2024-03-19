@@ -8,13 +8,11 @@ typedef struct ListNode {
     struct ListNode* next;
 } ListNode;
 
-
 typedef struct LinkedListBasic {
     ListNode* head;
     ListNode* tail;
     int size;
 } LinkedListBasic;
-
 
 ListNode* create_node(int newItem) {
     ListNode* new_node = (ListNode*)malloc(sizeof(ListNode));
@@ -25,13 +23,11 @@ ListNode* create_node(int newItem) {
     return new_node;
 }
 
-
 void init_linked_list(LinkedListBasic* list) {
     list->head = NULL;
     list->tail = NULL;
     list->size = 0;
 }
-
 
 void append(LinkedListBasic* list, int newItem) {
     ListNode* new_node = create_node(newItem);
@@ -46,7 +42,6 @@ void append(LinkedListBasic* list, int newItem) {
         list->size++;
     }
 }
-
 
 void remove_item(LinkedListBasic* list, int newItem) {
     ListNode* current = list->head;
@@ -70,7 +65,6 @@ void remove_item(LinkedListBasic* list, int newItem) {
     }
 }
 
-
 bool contains(LinkedListBasic* list, int newItem) {
     ListNode* current = list->head;
     while (current != NULL) {
@@ -82,8 +76,6 @@ bool contains(LinkedListBasic* list, int newItem) {
     return false;
 }
 
-
 int size(LinkedListBasic* list) {
     return list->size;
 }
-
