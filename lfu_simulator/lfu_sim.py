@@ -1,6 +1,6 @@
 from minheap import MinHeap
     
-def lfu_sim(cache_slots):
+def lfu_sim(cache_slots): 
     cache_hit = 0
     tot_cnt = 0
     cache = MinHeap()
